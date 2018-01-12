@@ -1,0 +1,36 @@
+Asp.net Core 2.0 features and Angular CLI
+
+
+1) Can create applications from From commandline, which also downloads dependancies from 
+Nuget automatically
+
+c: \ dotnet new web -o myapp
+
+c:\<folder name>\ code .c   (go to directory on commandprompt)
+
+2) Only one package needed to create Core project -> AspnetCore.All (with one version 2.0.0)
+
+3) Published Application is much smaller than 1.1 'Runtime Store' includes all the binaries
+
+4) Creating Project in IDE also supports creating project in Asp.net core 2.0 (all core frameworks )as well as Asp.Net framework
+
+5) Add New Project -> Web Application -> default one uses the Razor pages as View with a mix of MVC flavor. While for core MVC there is separate template.
+6) Support for new templates like Angular, React, React + Redux is also available as templates for project creation
+7) Razor pages still support ‘Separation of concern’ feature by having cshtml.cs pages for all Razor pages, where you can write the actual logic.
+8) ViewModels can be created with the attribute ‘BindProperty’ which will do the data binding on own.
+9) Properties can also be marked with attribute like ‘Tempdata’ which will automatically store the details of the property in storage.
+10) Authentication Revamp –
+a) uses in startup file -> App.useAuthentication -> thata covers for all kinds of social media authentication as well using DI. So, you pass the respective q	service for DI resolving and it’s all set for third party authentication.
+b) Also supports Two Factor Authentication in a much simpler way.
+11) Angular SPA – This Template actually includes all the NPM stuff, javascript technologies, typescript, Angular and Webpack with .Net Core 2.0 ready to be used in a project.
+	a) Make changes in the application and even without refreshing the web page, content is refreshed on browser as Webpack is automatically detecting the changes, building the same and pushing it to the browser.
+	b) typescript features are also enabled, so that angular app can be debugged right from the app.
+
+12) Performance  - Now .Net Precompile views and pages and that doesn’t needs to be compiled in runtime, which saves lot of time from 1.1 to 2.0 . Plus, the ‘Runtime Store’ which has all the binaries, which saves the time of Jitters. Even the binaries generated in ‘Published’ version is much much smaller in Core 2.0, than earlier versions. Publish folders also contains precompiled view dlls.
+13) Seemless diagnostics – without writing any code. ‘Light –up’ – Integrates with ‘Application Insights’ and gives information . This ‘Application Insights’ is available both on Azure as well as on .Net application. 
+Run the application in the debugger, come back to VS IDE and it shows ‘Diagnostic Tools’. On that you can click on event tab (in lower section) and see how operations are performing. Also uses ‘Tag Helper’ component.
+14) Media type suffixes for Web API.
+
+15) Razor Page Sample project – Has got the Startup file as Program.cs, where Main method is the one that runs first calling BuildWebHost function. 
+16) Program.cs + Startup.cs = Makes the code based configuration of the app.
+
